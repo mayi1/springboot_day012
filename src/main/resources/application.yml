@@ -1,0 +1,22 @@
+server:
+  context-path: /springboot_day02
+  port: 8989
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  datasource:
+    name: test
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  mapper-locations: classpath:com/baizhi/dao/*Dao.xml
+  type-aliases-package: com.baizhi.entity
